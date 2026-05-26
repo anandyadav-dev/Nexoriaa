@@ -7,7 +7,6 @@ import {
   CreditCard,
   Globe2,
   Layers3,
-  MapPin,
   MessageSquareQuote,
   Search,
   Server,
@@ -46,11 +45,13 @@ const techStack = [
   "Python",
   "Django",
   "FastAPI",
+  "Node.js",
   "React.js",
   "Next.js",
   "WordPress",
   "WooCommerce",
   "React Native",
+  "Flutter",
   "Android",
   "iOS",
   "AI/ML",
@@ -87,8 +88,8 @@ export default function HomePage() {
         <div className="section-shell relative grid min-h-[calc(100vh-5rem)] items-center gap-14 py-16 lg:grid-cols-[1.04fr_0.96fr] lg:py-20">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-sm">
-              <MapPin size={16} className="text-cyan" />
-              Indira Nagar, Lucknow
+              <Sparkles size={16} className="text-cyan" />
+              One-stop IT solutions for growing businesses
             </div>
             <h1 className="mt-7 max-w-4xl text-4xl font-black tracking-tight text-ink sm:text-5xl lg:text-7xl">
               Premium IT solutions for websites, apps, software, and digital growth.
@@ -156,8 +157,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-slate-50 py-20">
-        <div className="section-shell py-16">
+      <section className="bg-slate-50 pt-16 pb-10">
+        <div className="section-shell">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="eyebrow">Core Services</p>
@@ -180,7 +181,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-shell grid gap-12 py-20 lg:grid-cols-[0.9fr_1.1fr]">
+      <section className="section-shell grid gap-12 pt-10 pb-20 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <p className="eyebrow">Why NEXORIAA</p>
           <h2 className="section-title">A technology partner that thinks beyond just building pages.</h2>
