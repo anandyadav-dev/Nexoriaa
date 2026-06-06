@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, Mail, MapPin, Phone, Server, Smartphone, Sparkles } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Mail, Server, Smartphone, Sparkles } from "lucide-react";
 
 const links = [
   { href: "/", label: "Home" },
@@ -40,18 +41,19 @@ export function SiteFooter() {
 
       <div className="section-shell relative grid gap-10 pb-12 md:grid-cols-2 lg:grid-cols-[1.25fr_0.8fr_1fr_1fr]">
         <div>
-          <div className="flex items-center gap-3">
-            <span className="grid h-12 w-12 place-items-center rounded-lg bg-gradient-to-br from-cyan to-aurora text-xl font-black shadow-glow">
-              N
-            </span>
-            <div>
-              <p className="text-xl font-black">NEXORIAA Technologies</p>
-              <p className="text-sm text-slate-300">Premium IT solutions partner</p>
-            </div>
+          <div className="inline-flex rounded-lg bg-white px-3 py-2 shadow-glow">
+            <Image
+              src="/nexoriaa-logo.jpeg"
+              alt="NEXORIAA Technologies"
+              width={250}
+              height={64}
+              className="h-14 w-auto object-contain"
+            />
           </div>
+          <p className="mt-4 text-sm font-semibold text-slate-300">Premium IT solutions partner</p>
           <p className="mt-5 max-w-md text-sm leading-6 text-slate-300">
-            A one-stop IT company in Indira Nagar, Lucknow for custom software, websites,
-            mobile apps, hosting, SEO, and digital growth.
+            A one-stop IT company in India for custom software, websites, mobile apps, hosting,
+            SEO, and digital growth.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {[
@@ -103,24 +105,12 @@ export function SiteFooter() {
         <div>
           <p className="font-bold">Contact</p>
           <div className="mt-4 grid gap-4 text-sm text-slate-300">
-            <a href="tel:+917786021786" className="flex items-center gap-3 transition hover:text-cyan">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-white/[0.06] text-cyan">
-                <Phone size={16} />
-              </span>
-              +91 7786021786
-            </a>
-            <p className="flex items-center gap-3">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-white/[0.06] text-cyan">
-                <MapPin size={16} />
-              </span>
-              Indira Nagar, Lucknow
-            </p>
-            <Link href="/contact" className="flex items-center gap-3 transition hover:text-cyan">
+            <a href="mailto:info@nexoriaa.co.in" className="flex items-center gap-3 transition hover:text-cyan">
               <span className="grid h-9 w-9 place-items-center rounded-lg bg-white/[0.06] text-cyan">
                 <Mail size={16} />
               </span>
-              Send enquiry
-            </Link>
+              info@nexoriaa.co.in
+            </a>
           </div>
         </div>
       </div>

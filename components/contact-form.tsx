@@ -19,15 +19,16 @@ export function ContactForm() {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
     const name = String(form.get("name") || "");
+    const email = String(form.get("email") || "");
     const service = String(form.get("service") || "");
     const message = String(form.get("message") || "");
-    const phone = String(form.get("phone") || "");
-    const text = encodeURIComponent(
-      `Hello NEXORIAA Technologies, I am ${name}. I need help with ${service}. Phone: ${phone}. Message: ${message}`,
+    const subject = encodeURIComponent(`Project enquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Hello NEXORIAA Technologies,\n\nI am ${name}.\nEmail: ${email}\nService needed: ${service}\n\nMessage:\n${message}`,
     );
 
     setSent(true);
-    window.open(`https://wa.me/917786021786?text=${text}`, "_blank", "noopener,noreferrer");
+    window.open(`mailto:info@nexoriaa.co.in?subject=${subject}&body=${body}`, "_blank", "noopener,noreferrer");
     event.currentTarget.reset();
   }
 
@@ -50,16 +51,6 @@ export function ContactForm() {
             type="email"
             required
             placeholder="you@example.com"
-            className="min-h-12 rounded-lg border border-slate-200 px-4 font-medium outline-none transition focus:border-cyan focus:ring-4 focus:ring-cyan/10"
-          />
-        </label>
-        <label className="grid gap-2 text-sm font-bold text-slate-700">
-          Phone
-          <input
-            name="phone"
-            type="tel"
-            required
-            placeholder="+91"
             className="min-h-12 rounded-lg border border-slate-200 px-4 font-medium outline-none transition focus:border-cyan focus:ring-4 focus:ring-cyan/10"
           />
         </label>
@@ -95,7 +86,7 @@ export function ContactForm() {
       </button>
       {sent ? (
         <p className="mt-4 rounded-lg bg-cyan/10 px-4 py-3 text-sm font-semibold text-cyan">
-          Your WhatsApp enquiry is ready. Our team will respond shortly.
+          Your email enquiry is ready. Our team will respond shortly.
         </p>
       ) : null}
     </form>

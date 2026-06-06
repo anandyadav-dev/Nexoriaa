@@ -1,6 +1,6 @@
 # NEXORIAA Technologies Website
 
-Modern multi-page business website for **NEXORIAA Technologies**, an IT solutions company based in Lucknow.
+Modern multi-page business website for **NEXORIAA Technologies**, an IT solutions company serving businesses across India.
 
 Built with:
 
@@ -245,5 +245,5 @@ pm2 restart nexoriaa-website
 
 **NEXORIAA Technologies**
 
-- Phone: +91 7786021786
-- Location: Indira Nagar, Lucknow
+- Email: info@nexoriaa.co.in
+- Service Area: India

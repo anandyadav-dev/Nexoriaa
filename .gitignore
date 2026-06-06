@@ -21,3 +21,11 @@ pnpm-debug.log*
 # system files
 .DS_Store
 Thumbs.db
+
+.vercel
+
+# local archives and generated metadata
+*.7z
+*.zip
+*.rar
+tsconfig.tsbuildinfo

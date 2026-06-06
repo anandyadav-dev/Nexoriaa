@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -19,16 +20,15 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
       <nav className="section-shell flex h-20 items-center justify-between">
-        <Link href="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="grid h-11 w-11 place-items-center rounded-lg bg-gradient-to-br from-cyan to-aurora text-lg font-black text-white shadow-glow">
-            N
-          </span>
-          <span className="leading-tight">
-            <span className="block text-lg font-black tracking-tight text-ink">NEXORIAA</span>
-            <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-              Technologies
-            </span>
-          </span>
+        <Link href="/" className="group flex items-center" onClick={() => setOpen(false)}>
+          <Image
+            src="/nexoriaa-logo.jpeg"
+            alt="NEXORIAA Technologies"
+            width={238}
+            height={60}
+            priority
+            className="h-12 w-auto object-contain sm:h-14"
+          />
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">

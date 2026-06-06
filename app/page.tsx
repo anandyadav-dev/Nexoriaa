@@ -1,18 +1,15 @@
 import Link from "next/link";
+import { HeroThreeScene } from "@/components/hero-three-scene";
 import {
   ArrowRight,
   ArrowUpRight,
-  CheckCircle2,
   Code2,
-  CreditCard,
   Globe2,
-  Layers3,
   MessageSquareQuote,
   Search,
   Server,
   ShieldCheck,
   Smartphone,
-  Sparkles,
   Star,
 } from "lucide-react";
 
@@ -61,7 +58,7 @@ const techStack = [
 ];
 
 const reasons = [
-  "Local Lucknow presence with responsive support",
+  "India-focused presence with responsive support",
   "Full-stack delivery from UI to deployment",
   "CMS, commerce, software, and mobile expertise",
   "Clean handover, training, and growth support",
@@ -83,76 +80,47 @@ const projects = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative overflow-hidden bg-white">
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,182,212,.06)_1px,transparent_1px),linear-gradient(rgba(15,23,42,.05)_1px,transparent_1px)] bg-[size:64px_64px]" />
-        <div className="section-shell relative grid min-h-[calc(100vh-5rem)] items-center gap-14 py-16 lg:grid-cols-[1.04fr_0.96fr] lg:py-20">
-          <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-sm">
-              <Sparkles size={16} className="text-cyan" />
-              One-stop IT solutions for growing businesses
+      <section className="hero-3d-section">
+        <div className="hero-3d-grid" />
+        <div className="section-shell relative grid min-h-[calc(100vh-5rem)] items-center gap-8 py-12 lg:grid-cols-[1.04fr_0.96fr] lg:py-16">
+          <div className="hero-3d-copy">
+            <div className="hero-3d-badge">
+              <span />
+              One-stop IT solutions - India
             </div>
-            <h1 className="mt-7 max-w-4xl text-4xl font-black tracking-tight text-ink sm:text-5xl lg:text-7xl">
-              Premium IT solutions for websites, apps, software, and digital growth.
+            <h1 className="hero-3d-title">
+              Premium IT solutions for <span>digital growth.</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            <p className="hero-3d-subtitle">
               NEXORIAA Technologies helps businesses launch modern websites, mobile apps,
               custom software, hosting infrastructure, and growth systems with reliable execution.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact#quote" className="button-primary">
+            <div className="hero-3d-actions">
+              <Link href="/contact#quote" className="hero-3d-primary">
                 Get a Quote
                 <ArrowRight size={18} />
               </Link>
-              <Link href="/services" className="button-secondary">
+              <Link href="/services" className="hero-3d-secondary">
                 Explore Services
               </Link>
             </div>
-            <div className="mt-10 grid max-w-2xl gap-4 border-y border-slate-200 py-6 sm:grid-cols-3">
+            <div className="hero-3d-stats">
               {[
                 ["360 deg", "IT delivery"],
-                ["Local", "Lucknow team"],
-                ["Modern", "Tech stack"],
+                ["50+", "Projects launched"],
+                ["100%", "India focused"],
               ].map(([value, label]) => (
                 <div key={label}>
-                  <p className="text-2xl font-black text-ink">{value}</p>
-                  <p className="mt-1 text-sm font-semibold text-slate-500">{label}</p>
+                  <p>{value}</p>
+                  <span>{label}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="home-visual" aria-label="Modern technology product visual">
-            <div className="home-visual-shell">
-              <div className="home-visual-topbar">
-                <span />
-                <span />
-                <span />
-              </div>
-              <div className="home-visual-main">
-                <div className="home-visual-mark">
-                  <Layers3 size={34} />
-                </div>
-                <p className="text-xs font-black uppercase tracking-[0.26em] text-cyan">
-                  NEXORIAA Delivery System
-                </p>
-                <h2 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl">
-                  Strategy, design, development, launch.
-                </h2>
-                <div className="mt-8 grid gap-3">
-                  {["Custom software", "Web & mobile apps", "SEO-ready launch"].map((item) => (
-                    <div key={item} className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.06] p-3 text-sm font-bold text-slate-100">
-                      <CheckCircle2 size={18} className="text-cyan" />
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="home-visual-orbit orbit-a" />
-              <div className="home-visual-orbit orbit-b" />
-              <div className="home-visual-chip chip-a">Next.js</div>
-              <div className="home-visual-chip chip-b">.NET</div>
-              <div className="home-visual-chip chip-c">React Native</div>
-            </div>
+          <div className="hero-3d-scene-wrap">
+            <HeroThreeScene />
+            <div className="hero-3d-scene-label">Nexoriaa - Full Stack</div>
           </div>
         </div>
       </section>
@@ -285,8 +253,8 @@ export default function HomePage() {
                 Start a Project
                 <ArrowRight size={18} />
               </Link>
-              <a href="tel:+917786021786" className="button-secondary">
-                Call +91 7786021786
+              <a href="mailto:info@nexoriaa.co.in" className="button-secondary">
+                info@nexoriaa.co.in
               </a>
             </div>
           </div>

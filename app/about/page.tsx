@@ -1,5 +1,5 @@
 import { PageHero } from "@/components/page-hero";
-import { BadgeCheck, Goal, Lightbulb, MapPin } from "lucide-react";
+import { BadgeCheck, Globe2, Goal, Lightbulb } from "lucide-react";
 
 const values = [
   { icon: Lightbulb, title: "Vision", copy: "To make premium, future-ready technology accessible for businesses that want to move faster and serve customers better." },
@@ -12,7 +12,7 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About NEXORIAA"
-        title="A trusted technology partner based in Indira Nagar, Lucknow."
+        title="A trusted technology partner serving businesses across India."
         copy="NEXORIAA Technologies helps businesses turn ideas into dependable digital products through strong engineering, thoughtful design, and practical growth support."
         ctaLabel="Talk to Our Team"
         ctaHref="/contact"
@@ -32,12 +32,12 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="rounded-lg bg-ink p-6 text-white shadow-glow">
-          <MapPin className="text-cyan" size={34} />
-          <h3 className="mt-8 text-3xl font-black">Lucknow presence. Global execution standards.</h3>
+          <Globe2 className="text-cyan" size={34} />
+          <h3 className="mt-8 text-3xl font-black">India presence. Global execution standards.</h3>
           <p className="mt-4 leading-7 text-slate-300">
-            From Indira Nagar, Lucknow, NEXORIAA supports local businesses, startups, and service
-            providers with digital products that feel polished, perform reliably, and scale with
-            real operational needs.
+            NEXORIAA supports businesses, startups, and service providers across India with
+            digital products that feel polished, perform reliably, and scale with real operational
+            needs.
           </p>
         </div>
       </section>
